@@ -41,10 +41,28 @@ WHERE qualification_year = 2012;
 
 ## Project Structure
 
-config/ – configuration files and database schema  
-data/ – training dataset for fine-tuning  
-src/ – core application modules  
-
+ai-text-to-sql
+│
+├── config
+│   ├── config.yaml
+│   └── schema.yaml
+│
+├── data
+│   └── train.jsonl
+│
+├── src
+│   ├── config_loader.py
+│   ├── dataset.py
+│   ├── db.py
+│   ├── openai_finetune.py
+│   ├── run_query.py
+│   ├── schema_loader.py
+│   ├── sql_engine.py
+│   └── train.py
+│
+├── README.md
+├── requirements.txt
+└── sample.jsonl
 Key modules:
 
 - `sql_engine.py` → SQL generation and validation  
